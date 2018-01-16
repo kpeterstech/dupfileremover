@@ -49,9 +49,8 @@ def hashFiles(fileList):
     # value, with the name being added as the first value
 
     print("Hashing the files now...")
-    for i in fileList:
-        name = i
-        with open(i, "rb") as aFile:
+    for name in fileList:
+        with open(name, "rb") as aFile:
             fileContents = aFile.read()
             value = hashlib.md5(fileContents).hexdigest()
         if value in results:
