@@ -5,3 +5,9 @@ lib
 lib64
 pyvenv.cfg
 share
+
+# setuptools distribution folder
+/dist/
+
+$ python egg metadata
+/*.egg-info
