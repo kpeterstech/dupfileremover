@@ -1,0 +1,7 @@
+# venv components that are not needed
+bin
+include
+lib
+lib64
+pyvenv.cfg
+share
