@@ -6,6 +6,9 @@ lib64
 pyvenv.cfg
 share
 
+# Compiled python modules
+*.pyc
+
 # setuptools distribution folder
 /dist/
 

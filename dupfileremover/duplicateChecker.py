@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import os
 import sys
 import hashlib
@@ -48,7 +46,6 @@ def hashFiles(fileList):
     # dict, then the md5sum is added as they key, and a list is created as the
     # value, with the name being added as the first value
 
-    print("Hashing the files now...")
     for name in fileList:
         with open(name, "rb") as aFile:
             fileContents = aFile.read()
