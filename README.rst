@@ -15,6 +15,15 @@ Options:
                         (default is 1)
   --help                Show this message and exit.
 
+Installation
+============
+
+dupfileremover is currently availiable in the pypi repository. The easiest way
+to download it is with the following command
+
+``pip install dupfileremover``
+
+https://pypi.python.org/pypi/dupfileremover/0.2.1
 
 Examples
 ========
