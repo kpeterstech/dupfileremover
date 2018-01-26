@@ -11,11 +11,7 @@ import os
               type=int,
               help='The maximum number of each file that should be found (default is 1)')
 def cli(number, folders):
-    """Entry point for dupfileremover.
-        :param number: An Int, an option number that tells how many of each identical file is allowed to be found
-        :param folders: A String, required argument that gives paths and locations of files that will be used to
-        find duplicates
-    """
+
     # if no arguments were passed exit the program
     if len(folders) == 0:
         print("Not enought arguments. Please include a file or folder")
@@ -40,17 +36,23 @@ def cli(number, folders):
         print(e)
 
     try:
+
         flattened = [val for sublist in folderList for val in sublist]
 
         allFiles = fileList + flattened
-
-        results = dc.hashFiles(allFiles)
 
     except Exception as e:
         print("Something went wrong combining the files and folders together")
         print(e)
 
-    print("Hashing the files now")
+    try:
+        print("Hashing the files now...")
+        results = dc.hashFiles(allFiles)
+
+    except Exception as e:
+        print("Error hashing the files")
+        print(e)
+
     try:
         for k, v in results.items():
             if(len(v) > number):

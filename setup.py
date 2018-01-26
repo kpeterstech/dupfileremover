@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def readme():
@@ -7,18 +7,17 @@ def readme():
 
 
 setup(name='dupfileremover',
-      version='0.2',
+      version='0.2.1',
       description='A command line utility that helps you find  and remove duplicate files',
       long_description=readme(),
       url='http://github.com/kpeterstech/dupfileremover',
       author='Kit Peterson',
       author_email='kpeterstech@gmail.com',
       license='MIT',
-      packages=['dupfileremover'],
+      packages=find_packages(exclude=['tests']),
       install_requires=[
           'Click',
       ],
-      zip_safe=False,
       entry_points={
           'console_scripts': ['dupfileremover=dupfileremover.command_line:cli']
       })

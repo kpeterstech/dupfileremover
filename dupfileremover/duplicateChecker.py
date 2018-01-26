@@ -1,20 +1,15 @@
 import os
 import hashlib
 
-# the compileFiles function takes in an argument(path) and uses that to find all
-# files wihtin that path. Those are the files that will be hashed to check for
-# duplicates.
 
-
-def compileFiles(list):
+def compileFiles(path):
     """Takes in a list of files and returns their relative path"""
 
-    files = []
-
-    for root, dirs, files in os.walk(list):
+    file = []
+    for root, dirs, files in os.walk(path):
         for name in files:
-            files.append(os.path.join(root, name))
-    return files
+            file.append(os.path.join(root, name))
+    return file
 
 
 def hashFiles(fileList):
