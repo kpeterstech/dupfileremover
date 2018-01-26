@@ -11,7 +11,12 @@ import os
               type=int,
               help='The maximum number of each file that should be found (default is 1)')
 def cli(number, folders):
-
+    """Entry point for dupfileremover.
+        :param number: An Int, an option number that tells how many of each identical file is allowed to be found
+        :param folders: A String, required argument that gives paths and locations of files that will be used to
+        find duplicates
+    """
+    # if no arguments were passed exit the program
     if len(folders) == 0:
         print("Not enought arguments. Please include a file or folder")
         exit()
