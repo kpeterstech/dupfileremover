@@ -7,8 +7,8 @@ def readme():
 
 
 setup(name='dupfileremover',
-      version='0.2.1',
-      description='A command line utility that helps you find  and remove duplicate files',
+      version='0.2.2',
+      description='A command line utility that helps you find and remove duplicate files',
       long_description=readme(),
       url='http://github.com/kpeterstech/dupfileremover',
       author='Kit Peterson',
@@ -17,6 +17,7 @@ setup(name='dupfileremover',
       packages=find_packages(exclude=['tests']),
       install_requires=[
           'Click',
+          'tqdm',
       ],
       entry_points={
           'console_scripts': ['dupfileremover=dupfileremover.command_line:cli']

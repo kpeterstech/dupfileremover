@@ -1,5 +1,6 @@
 import os
 import hashlib
+from tqdm import tqdm
 
 
 def compileFiles(path):
@@ -19,7 +20,7 @@ def hashFiles(fileList):
     """
     results = {}
 
-    for file in fileList:
+    for file in tqdm(fileList, unit=" files"):
         with open(file, "rb") as aFile:
             fileContents = aFile.read()
             hash = hashlib.md5(fileContents).hexdigest()
