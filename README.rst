@@ -23,7 +23,7 @@ to download it is with the following command
 
 ``pip install dupfileremover``
 
-https://pypi.python.org/pypi/dupfileremover/0.2.1
+https://pypi.python.org/pypi/dupfileremover/
 
 Examples
 ========
